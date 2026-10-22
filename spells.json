@@ -1,0 +1,75 @@
+{
+    "spells": 
+    [    
+        {
+            "name": "Acid Splash",
+            "level": 0,
+            "school": "Evocation",
+            "class": ["Sorcerer", "Wizard", "Artificer"],
+            "subClasses": ["Arcane Trickster Rogues","Eldritch Knight Fighters"],
+            "description": "You create an acidic bubble at a point within range, where it explodes in a 5-foot-radius Sphere. Each creature in that Sphere must succeed on a Dexterity saving throw or take 1d6 Acid damage.",
+            "castingTime": "A",
+            "duration": "instantaneous",
+            "range": "60ft",
+            "damage": "1d6",
+            "savingThrow": "DEX",
+            "areaOfEffect": "5 foot radius shpere",
+            "materialComponents": null,
+            "concentration": false,
+            "verbal": true,
+            "somatic": true,
+            "ritual": false,
+            "source": "Player's Handbook 2024"
+        },
+        {
+            "name": "Chill Touch",
+            "level": 0,
+            "school": "Necromancy",
+            "class": ["Sorcerer", "Warlock", "Wizard"],
+            "subClasses": ["Arcane Trickster Rogues","Eldritch Knight Fighters"],
+            "description": "Channeling the chill of the grave, make a melee spell attack against a target within reach. On a hit, the target takes 1d10 Necrotic damage, and it can't regain Hit Points until the end of your next turn.",
+            "castingTime": "A",
+            "duration": "instantaneous",
+            "range": "Touch",
+            "damage": "1d6",
+            "savingThrow": null,
+            "areaOfEffect": "One creature in the 5ft range of your character",
+            "materialComponents": null,
+            "concentration": false,
+            "verbal": true,
+            "somatic": true,
+            "ritual": false,
+            "source": "Player's Handbook 2024"            
+        },
+        {
+            "name": "Gust",
+            "level": 0,
+            "school": "Transmutation",
+            "class": ["Druid", "Sorcerer", "Wizard"],
+            "subClasses": ["Aecana Domain Clerics","Arcane Trickster Rogues","Eldritch Knight Fighters", "Nature Domain Clerics", "Strength Domain Clericks"],
+            "description": "You seize the air and compel it to create one of the following effects at a point you can see within range:\n• One Medium or smaller creature that you choose must succeed on a Strength saving throw or be pushed up to 5 feet away from you.\n• You create a small blast of air capable of moving one object that is neither held nor carried and that weighs no more than 5 pounds. The object is pushed up to 10 feet away from you. It isn't pushed with enough force to cause damage.\n• You create a harmless sensory affect using air, such as causing leaves to rustle, wind to slam shutters shut, or your clothing to ripple in a breeze.",
+            "castingTime": "A",
+            "duration": "instantaneous",
+            "range": "30ft",
+            "damage": null,
+            "savingThrow": "STR",
+            "areaOfEffect": "One creature/object in the 5ft range of your character",
+            "materialComponents": null,
+            "concentration": false,
+            "verbal": true,
+            "somatic": true,
+            "ritual": false,
+            "source": "Xanathar's Guide to Everything"              
+        },    
+        {
+            "name": "Beacon of Hope",
+            "level": 3,
+            "school": "Abjuration"
+        },
+        {
+            "name": "Imprisonment",
+            "level": 9,
+            "school": "Abjuration"
+        }
+    ]
+}

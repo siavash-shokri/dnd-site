@@ -1,55 +1,46 @@
-const acidSplash = {
-    name: "Acid Splash",
-    level: 0,
-    school: "Conjuration",
-};
-
-const chillTouch = {
-    name: "Chill Touch",
-    level: 0,
-    school: "Necromancy",
-};
-
-const fireBolt = {
-    name: "Fire Bolt",
-    level: 0,
-    school: "Evocation",
-};
-
-const beaconOfHope = {
-    name: "Beacon of Hope",
-    level: 3,
-    school: "Abjuration",
-};
-
-const imprisonment = {
-    name: "Imprisonment",
-    level: 9,
-    school: "Abjuration",
-};
-
-const spells = [acidSplash, chillTouch, fireBolt, beaconOfHope, imprisonment];
-
 let ulElement = document.querySelector("ul");
+let selectElement = document.querySelector("#spellLevel");
+let inputElement = document.querySelector("input");
+
+let spells = [];
+
+async function loadSpells() {
+    try{    
+        const response = await fetch('spells.json');
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        spells = data.spells;
+        filtering();
+    } catch (err) {
+        alert(`Failed to load spells: ${err.message}`);
+        ulElement.textContent = "Could not load the spells";
+    }
+}
 
 
 function showSpells(array) {
-    ulElement.replaceChildren()
-    for (let i = 0; i < array.length; i++) {
-        let liElement = document.createElement("li")
-        liElement.textContent = array[i].name
-        ulElement.append(liElement)
-    }
-};
+    ulElement.replaceChildren();
+    for (const spell of array) {
+        let liElement = document.createElement("li");
+        const levelOfSpell = spell.level === 0 ? "Cantrip" : `Level ${spell.level}`;
+        liElement.textContent = `${spell.name} - ${levelOfSpell} - ${spell.school}`;
+        ulElement.append(liElement);
+    };
+}
 
-showSpells(spells);
+function filtering() {
+    const nameTerm = inputElement.value.trim().toLowerCase();
+    const levelTerm = selectElement.value;
 
-let inputElement = document.querySelector("input");
+    const filtered = spells.filter(spell => {
+        const nameMatches = spell.name.toLowerCase().includes(nameTerm);
+        const levelMatches = levelTerm === "" || spell.level === Number(levelTerm);
+        return nameMatches && levelMatches;
+    });
+    showSpells(filtered)
+}
 
-function findNames() {
-    const searchTerm = this.value.toLowerCase();
-    const searchedSpellsNames = spells.filter(item => item.name.toLowerCase().includes(searchTerm));
-    showSpells(searchedSpellsNames);
-};
+inputElement.addEventListener("input", filtering);
+selectElement.addEventListener("change", filtering);
 
-inputElement.addEventListener("input", findNames);
+loadSpells();
