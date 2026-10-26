@@ -1,37 +1,54 @@
 {
-    "spells": 
-    [    
+    "spells": [
         {
             "name": "Acid Splash",
             "level": 0,
             "school": "Evocation",
-            "class": ["Sorcerer", "Wizard", "Artificer"],
-            "subClasses": ["Arcane Trickster Rogues","Eldritch Knight Fighters"],
-            "description": "You create an acidic bubble at a point within range, where it explodes in a 5-foot-radius Sphere. Each creature in that Sphere must succeed on a Dexterity saving throw or take 1d6 Acid damage.",
-            "castingTime": "A",
-            "duration": "instantaneous",
-            "range": "60ft",
+            "classes": [
+                "Sorcerer",
+                "Wizard",
+                "Artificer"
+            ],
+            "subClasses": [
+                "Arcane Trickster Rogues",
+                "Eldritch Knight Fighters"
+            ],
+            "description": "You create an acidic bubble at a point within range, where it explodes in a 5-foot-radius Sphere. Each creature in that Sphere must succeed on a Dexterity saving throw or take 1d6 Acid damage.\nCantrip Upgrade. The damage increases by 1d6 when you reach levels 5 (2d6),11 (3d6), and 17 (4d6).",
+            "castingTime": "Action",
+            "duration": "Instantaneous",
+            "range": "60 feet",
+            "heal": null,
             "damage": "1d6",
             "savingThrow": "DEX",
-            "areaOfEffect": "5 foot radius shpere",
+            "areaOfEffect": "Sphere/5 feet radius",
             "materialComponents": null,
             "concentration": false,
             "verbal": true,
             "somatic": true,
             "ritual": false,
-            "source": "Player's Handbook 2024"
+            "source": "Player's Handbook 2024",
+            "id": "bb563819-cd18-414a-95ad-d1a9a4534868",
+            "slug": "acid-splash"
         },
         {
             "name": "Chill Touch",
             "level": 0,
             "school": "Necromancy",
-            "class": ["Sorcerer", "Warlock", "Wizard"],
-            "subClasses": ["Arcane Trickster Rogues","Eldritch Knight Fighters"],
-            "description": "Channeling the chill of the grave, make a melee spell attack against a target within reach. On a hit, the target takes 1d10 Necrotic damage, and it can't regain Hit Points until the end of your next turn.",
-            "castingTime": "A",
-            "duration": "instantaneous",
+            "classes": [
+                "Sorcerer",
+                "Warlock",
+                "Wizard"
+            ],
+            "subClasses": [
+                "Arcane Trickster Rogues",
+                "Eldritch Knight Fighters"
+            ],
+            "description": "Channeling the chill of the grave, make a melee spell attack against a target within reach. On a hit, the target takes ldlo Necrotic damage, and it can't regain Hit Points until the end of your next turn.\nCantrip Upgrade. The damage increases by 1d10 when you reach levels 5 (2d10), 11 (3d10), and 17 (4d10).",
+            "castingTime": "Action",
+            "duration": "Instantaneous",
             "range": "Touch",
-            "damage": "1d6",
+            "heal": null,
+            "damage": "1d10",
             "savingThrow": null,
             "areaOfEffect": "One creature in the 5ft range of your character",
             "materialComponents": null,
@@ -39,37 +56,259 @@
             "verbal": true,
             "somatic": true,
             "ritual": false,
-            "source": "Player's Handbook 2024"            
+            "source": "Player's Handbook 2024",
+            "id": "ff54c147-903e-4f19-b387-edd3d45f233b",
+            "slug": "chill-touch"
         },
         {
             "name": "Gust",
             "level": 0,
             "school": "Transmutation",
-            "class": ["Druid", "Sorcerer", "Wizard"],
-            "subClasses": ["Aecana Domain Clerics","Arcane Trickster Rogues","Eldritch Knight Fighters", "Nature Domain Clerics", "Strength Domain Clericks"],
-            "description": "You seize the air and compel it to create one of the following effects at a point you can see within range:\n• One Medium or smaller creature that you choose must succeed on a Strength saving throw or be pushed up to 5 feet away from you.\n• You create a small blast of air capable of moving one object that is neither held nor carried and that weighs no more than 5 pounds. The object is pushed up to 10 feet away from you. It isn't pushed with enough force to cause damage.\n• You create a harmless sensory affect using air, such as causing leaves to rustle, wind to slam shutters shut, or your clothing to ripple in a breeze.",
-            "castingTime": "A",
-            "duration": "instantaneous",
-            "range": "30ft",
+            "classes": [
+                "Druid",
+                "Sorcerer",
+                "Wizard"
+            ],
+            "subClasses": [
+                "Arcane Trickster Rogues",
+                "Eldritch Knight Fighters",
+                "Nature Domain Clerics"
+            ],
+            "description": "You seize the air and compel it to create one of the following effects at a point you can see within range:\n\n• One Medium or smaller creature that you choose must succeed on a Strength saving throw or be pushed up to 5 feet away from you.\n\n• You create a small blast of air capable of moving one object that is neither held nor carried and that weighs no more than 5 pounds. The object is pushed up to 10 feet away from you. It isn't pushed with enough force to cause damage.\n\n• You create a harmless sensory affect using air, such as causing leaves to rustle, wind to slam shutters shut, or your clothing to ripple in a breeze.",
+            "castingTime": "Action",
+            "duration": "Instantaneous",
+            "range": "30 feet",
+            "heal": null,
             "damage": null,
             "savingThrow": "STR",
-            "areaOfEffect": "One creature/object in the 5ft range of your character",
+            "areaOfEffect": "One creature/object in the 5 feet range of your character",
             "materialComponents": null,
             "concentration": false,
             "verbal": true,
             "somatic": true,
             "ritual": false,
-            "source": "Xanathar's Guide to Everything"              
-        },    
-        {
-            "name": "Beacon of Hope",
-            "level": 3,
-            "school": "Abjuration"
+            "source": "Xanathar's Guide to Everything 2017",
+            "id": "0d587a8c-de2b-4b57-8610-34b7056a3f03",
+            "slug": "gust"
         },
         {
-            "name": "Imprisonment",
-            "level": 9,
-            "school": "Abjuration"
+            "name": "Gust of Wind",
+            "level": 2,
+            "school": "Evocation",
+            "classes": [
+                "Druid",
+                "Ranger",
+                "Sorcerer",
+                "Wizard"
+            ],
+            "subClasses": [
+                "Arcane Trickster Rogues",
+                "Eldritch Knight Fighters"
+            ],
+            "description": "A Line of strong wind 60 feet long and 10 feet wide blasts from you in a direction you choose for the duration. Each creature in the Line must succeed on a Strength saving throw or be pushed 15 feet away from you in a direction following the Line. A creature that ends its turn in the Line must make the same save.\nAny creature in the Line must spend 2 feet of movement for every 1 foot it moves when moving closer to you.\nThe gust disperses gas or vapor, and it extinguishes candles and similar unprotected flames in the area. It causes protected flames, such as those of lanterns, to dance wildly and has a 50 percent chance to extinguish them.\nAs a Bonus Action on your later turns, you can change the direction in which the Line blasts from you.",
+            "castingTime": "Action",
+            "duration": "up to 1 minute",
+            "range": "Self",
+            "heal": null,
+            "damage": null,
+            "savingThrow": "STR",
+            "areaOfEffect": "Line/60 feet",
+            "materialComponents": "A Legume Seed",
+            "concentration": true,
+            "verbal": true,
+            "somatic": true,
+            "ritual": false,
+            "source": "Player's Handbook 2024",
+            "id": "e7c1ae9e-1041-49d6-a540-06803e38d482",
+            "slug": "gust-of-wind"
+        },
+        {
+            "name": "Summon Fey",
+            "level": 3,
+            "school": "Conjuration",
+            "classes": [
+                "Druid",
+                "Ranger",
+                "Warlock",
+                "Wizard"
+            ],
+            "subClasses": [
+                "Arcane Trickster Rogues",
+                "Eldritch Knight Fighters"
+            ],
+            "description": "You call forth a Fey spirit. It manifests in an unoccupied space that you can see within range and uses the Fey Spirit stat block. When you cast the spell, choose a mood: Fuming, Mirthful, or Tricksy. The creature resembles a Fey creature of your choice marked by the chosen mood, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends. The creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its movement to avoid danger.\n\nUsing a Higher-Level Spell Slot. Use the spell slot's level for the spell's level in the stat block.",
+            "castingTime": "Action",
+            "duration": "up to 1 hour",
+            "range": "90 feet",
+            "heal": null,
+            "damage": null,
+            "savingThrow": null,
+            "areaOfEffect": null,
+            "materialComponents": "A Gilded Flower Worth 300+ GP",
+            "concentration": true,
+            "verbal": true,
+            "somatic": true,
+            "ritual": false,
+            "source": "Player's Handbook 2024",
+            "id": "608ff05c-8cf3-4059-98c6-15a5ff239e2a",
+            "slug": "summon-fey"
+        },
+        {
+            "name": "Summon Undead",
+            "level": 3,
+            "school": "Necromancy",
+            "classes": [
+                "Warlock",
+                "Wizard"
+            ],
+            "subClasses": [
+                "Arcane Trickster Rogues",
+                "Colege of Lore Bards",
+                "Eldritch Knight Fighters"
+            ],
+            "description": "You call forth an Undead spirit. It manifests in an unoccupied space that you can see within range and uses the Undead Spirit stat block. When you cast the spell, choose the creature's form: Ghostly, Putrid, or Skeletal. The spirit resembles an Undead creature with the chosen form, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.\n\nThe creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the Dodge action and uses its movement to avoid danger.\n\nUsing a Higher-Level Spell Slot. Use the spell slot's level for the spell's level in the stat block.",
+            "castingTime": "Action",
+            "duration": "up to 1 hour",
+            "range": "90 feet",
+            "heal": null,
+            "damage": null,
+            "savingThrow": null,
+            "areaOfEffect": null,
+            "materialComponents": "A Gilded Skull Worth 300+ GP",
+            "concentration": true,
+            "verbal": true,
+            "somatic": true,
+            "ritual": false,
+            "source": "Player's Handbook 2024",
+            "id": "abe71f9c-6da4-4fc7-8242-0cdafd250b83",
+            "slug": "summon-undead"
+        },
+        {
+            "name": "Dream",
+            "level": 5,
+            "school": "Illusion",
+            "classes": [
+                "Bard",
+                "Warlock",
+                "Wizard"
+            ],
+            "subClasses": [
+                "Arcane Trickster Rogues",
+                "Eldritch Knight Fighters"
+            ],
+            "description": "You target a creature you know on the same plane of existence. You or a willing creature you touch enters a trance state to act as a dream messenger. While in the trance, the messenger is Incapacitated and has a Speed of 0.\n\nIf the target is asleep, the messenger appears in the target's dreams and can converse with the target as long as it remains asleep, through the spell's duration. The messenger can also shape the dream's environment, creating landscapes, objects, and other images. The messenger can emerge from the trance at any time, ending the spell. The target recalls the dream perfectly upon waking.\n\nIf the target is awake when you cast the spell, the messenger knows it and can either end the trance (and the spell) or wait for the target to sleep, at which point the messenger enters its dreams.\n\nYou can make the messenger terrifying to the target. If you do so, the messenger can deliver a message of no more than ten words, and then the target makes a Wisdom saving throw. On a failed save, the target gains no benefit from its rest, and it takes 3d6 Psychic damage when it wakes up.",
+            "castingTime": "1 minute",
+            "duration": "8 hours",
+            "range": "Special",
+            "heal": null,
+            "damage": "3d6",
+            "savingThrow": "WIS",
+            "areaOfEffect": null,
+            "materialComponents": "A Handful of Sand",
+            "concentration": false,
+            "verbal": true,
+            "somatic": true,
+            "ritual": false,
+            "source": "Player's Handbook 2024",
+            "id": "32627863-85be-4451-8a13-5e6371127220",
+            "slug": "dream"
+        },
+        {
+            "name": "Cure Wounds",
+            "level": 1,
+            "school": "Evocation",
+            "classes": [
+                "Artificer",
+                "Bard",
+                "Cleric",
+                "Druid",
+                "Paladin",
+                "Ranger"
+            ],
+            "subClasses": [
+                "Circle of the Moon Druids",
+                "Life Domain Clerics",
+                "The Celestial Warlocks"
+            ],
+            "description": "A creature you touch regains a number of Hit Points equal to 2d8 plus your spellcasting ability modifier.\nUsing a Higher-Level Spell Slot. The healing increases by 2d8 for each spell slot level above 1.",
+            "castingTime": "Action",
+            "duration": "Instantaneous",
+            "range": "Touch",
+            "heal": "2d8+modifier",
+            "damage": null,
+            "savingThrow": null,
+            "areaOfEffect": "One creature/object that you touch",
+            "materialComponents": null,
+            "concentration": false,
+            "verbal": true,
+            "somatic": true,
+            "ritual": false,
+            "source": "Player's Handbook 2024",
+            "id": "44580e04-3703-4f6c-b847-51c765d658f2",
+            "slug": "cure-wounds"
+        },
+        {
+            "name": "Identify",
+            "level": 1,
+            "school": "Divination",
+            "classes": [
+                "Bard",
+                "Wizard"
+            ],
+            "subClasses": [
+                "Arcane Trickster Rogues",
+                "Eldritch Knight Fighters"
+            ],
+            "description": "You touch an object throughout the spell's casting. If the object is a magic item or some other magical object, you learn its properties and how to use them, whether it requires Attunement, and how many charges it has, if any. You learn whether any ongoing spells are affecting the item and what they are. If the item was created by a spell, you learn that spell's name.\n\nIf you instead touch a creature throughout the casting, you learn which ongoing spells, if any, are currently affecting it.",
+            "castingTime": "1 minute",
+            "duration": "Instantaneous",
+            "range": "Touch",
+            "heal": null,
+            "damage": null,
+            "savingThrow": null,
+            "areaOfEffect": "One creature/object that you touch",
+            "materialComponents": "A Pearl Worth 100+ GP",
+            "concentration": false,
+            "verbal": true,
+            "somatic": true,
+            "ritual": true,
+            "source": "Player's Handbook 2024",
+            "id": "a1d0dd6f-701a-497b-bfcc-e09aa873c0e8",
+            "slug": "identify"
+        },
+        {
+            "name": "Misty Step",
+            "level": 2,
+            "school": "Conjuration",
+            "classes": [
+                "Sorcerer",
+                "Warlock",
+                "Wizard"
+            ],
+            "subClasses": [
+                "Arcane Trickster Rogues",
+                "Circle of the Land(Coast/Temperate Land) Druids",
+                "College of Lore Bards",
+                "Life Domain Clerics",
+                "Oath of the Ancients Paladins",
+                "Oath of Vengeance Paladins"
+            ],
+            "description": "Briefly surrounded by silvery mist, you teleport up to 30 feet to an unoccupied space you can see.",
+            "castingTime": "Bonus Action",
+            "duration": "Instantaneous",
+            "range": "Self",
+            "heal": null,
+            "damage": null,
+            "savingThrow": null,
+            "areaOfEffect": "up to 30 Feet",
+            "materialComponents": null,
+            "concentration": false,
+            "verbal": true,
+            "somatic": false,
+            "ritual": false,
+            "source": "Player's Handbook 2024",
+            "id": "f47e4c4b-888b-46d2-afac-8e7bbc627461",
+            "slug": "misty-step"
         }
     ]
 }
