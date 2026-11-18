@@ -1,0 +1,19 @@
+li {
+    white-space: pre-wrap;
+}
+.spells {
+    cursor: pointer;
+}
+.clicked {
+    color: rgb(163, 108, 35);
+}
+.description {
+    font-size: 0.9rem;
+    color: black;
+}
+#spells span:hover {
+  font-weight: bold;
+}
+#spells span {
+  cursor: pointer;
+}

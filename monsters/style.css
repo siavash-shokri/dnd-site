@@ -1,0 +1,19 @@
+li {
+    white-space: pre-wrap;
+}
+.monsters {
+    cursor: pointer;
+}
+.clicked {
+    color: rgb(163, 108, 35);
+}
+.description {
+    font-size: 0.9rem;
+    color: black;
+}
+#monsters span:hover {
+  font-weight: bold;
+}
+#monsters span {
+  cursor: pointer;
+}

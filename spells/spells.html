@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IDK YET</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="module" src="js/main.js"></script>
+    </head>
+    <body>
+        <header>
+        </header>
+
+
+        <main>
+            <div id="filters">
+                <label for="spellName">Name: </label>
+                <input type="text" id="spellName">
+
+                <label for="spellLevel">Level: </label>
+                <select id="spellLevel">
+                    <option value="">--Please choose the spell level--</option>
+                    <option value="0">Cantrip</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                </select>
+
+                <label for="spellSchool">School: </label>
+                <select id="spellSchool">
+                    <option value="">--Please choose the spell school--</option>
+                    <option value="abjuration">Abjuration</option>
+                    <option value="conjuration"> Conjuration</option>
+                    <option value="divination">Divination</option>
+                    <option value="enchantment">Enchantment</option>
+                    <option value="evocation">Evocation</option> 
+                    <option value="illusion">Illusion</option>
+                    <option value="necromancy">Necromancy</option>
+                    <option value="transmutation">Transmutation</option>
+                </select>
+
+                <label for="spellSource">Source: </label>
+                <select id="spellSource">
+                    <option value="">--Please choose the source book--</option>
+                </select>
+
+            </div>
+
+            <div id="sorts">
+                <label for="sortingStyle">Sort: </label>
+                <select id="sortingStyle">
+                    <option value="nAscending">Name: A-Z</option>
+                    <option value="nDescending">Name: Z-A</option>
+                    <option value="lAscending">Level: Ascending</option>
+                    <option value="lDescending">Level: Descending</option>
+                    <option value="sAscending">School: A-Z</option>
+                    <option value="sDescending">School: Z-A</option>
+                </select>
+            </div>
+            <div id="utilities">
+                <button id="resetFilters">Reset Filters</button>
+                <span id="spellCount">Loading spells...</span>
+            </div>
+
+            <ul id="spells"> 
+            </ul>
+        </main>
+
+
+        <footer>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,178 @@
+{
+  "monsters": [
+    {
+      "id": "8a4c5b2e-1f3d-4a7b-9c6e-2d8f0a1b3c4d",
+      "slug": "deva",
+      "name": "Deva",
+      "source": "Monster Manual 2014",
+      "description": "Devas are angels that act as divine messengers or agents to the Material Plane, the Shadowfell, and Feywild and that can assume a form appropriate to the realm they are sent to.\nLegend tells of angels that take mortal form for years, lending aid, hope, and courage to goodhearted folk. A deva can take any shape, although it prefers to appear to mortals as an innocuous humanoid or animal. When circumstances require that it cast off its guise, a deva is a beautiful humanoid-like creature with silvery skin. Its hair and eyes gleam with an unearthly luster, and large feathery wings unfurl from its shoulder blades.",
+      "type": "celestial",
+      "subtype": "angel",
+      "subSubtype": "deva",
+      "size": "Medium",
+      "alignment": "Lawful Good",
+      "cr": 10,
+      "xp": "5,900",
+      "proficiencyBonus": 4,
+      "armorClass": 17,
+      "armorType": "natural armor",
+      "initiative": 4,
+      "hitPoints": 136,
+      "hitDice": "16d8+64",
+      "speed": { "walking": 30, "flying": 90, "swimming": null, "climbing": null, "burrowing": null },
+      "abilities": { "STR": 18, "DEX": 18, "CON": 18, "INT": 17, "WIS": 20, "CHA": 20 },
+      "savingThrows": { "WIS": 9, "CHA": 9 },
+      "skills": { "Insight": 7, "Perception": 9 },
+      "damageVulnerabilities": [],
+      "damageResistances": ["radiant", "bludgeoning, piercing, and slashing from nonmagical attacks"],
+      "damageImmunities": [],
+      "conditionImmunities": ["charmed", "exhaustion", "frightened"],
+      "senses": { "darkvision": 120, "blindsight": null, "tremorsense": null, "truesight": null, "passivePerception": 19 },
+      "languages": ["All"],
+      "telepathy": 120,
+      "traits": [
+        { "name": "Angelic Weapons", "description": "The deva's weapon attacks are magical. When the deva hits with any weapon, the weapon deals an extra 4d8 radiant damage (included in the attack)." },
+        {
+          "name": "Innate Spellcasting",
+          "description": "The deva's spellcasting ability is Charisma (spell save DC 17). The deva can innately cast the following spells, requiring only verbal components.",
+          "spellcasting": { "ability": "Charisma", "saveDC": 17, "atWill": ["detect evil and good"], "perDay": { "1": ["commune", "raise dead"] } }
+        },
+        { "name": "Magic Resistance", "description": "The deva has advantage on saving throws against spells and other magical effects." }
+      ],
+      "actions": [
+        { "name": "Multiattack", "type": "multiattack", "description": "The deva makes two melee attacks." },
+        {
+          "name": "Mace",
+          "type": "meleeWeaponAttack",
+          "toHit": 8,
+          "reach": "5 ft.",
+          "target": "one target",
+          "damage": [
+            { "type": "bludgeoning", "dice": "1d6+4", "average": 7 },
+            { "type": "radiant", "dice": "4d8", "average": 18 }
+          ],
+          "description": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: 7 (1d6+4) bludgeoning damage plus 18 (4d8) radiant damage."
+        },
+        { "name": "Healing Touch", "type": "generic", "uses": { "max": 3, "per": "day" }, "description": "The deva touches another creature. The target magically regains 20 (4d8+2) hit points and is freed from any curse, disease, poison, blindness, or deafness." },
+        { "name": "Change Shape", "type": "generic", "description": "The deva magically polymorphs into a humanoid or beast that has a challenge rating equal to or less than its own, or back into its true form. It reverts to its true form if it dies. Any equipment it is wearing or carrying is absorbed or borne by the new form (the deva's choice). In a new form, the deva retains its game statistics and ability to speak, but its AC, movement modes, Strength, Dexterity, and special senses are replaced by those of the new form, and it gains any statistics and capabilities (except class features, legendary actions, and lair actions) that the new form has but that it lacks." }
+      ],
+      "bonusActions": [],
+      "reactions": [],
+      "legendaryActions": { "description": null, "actions": [] },
+      "lairActions": []
+    },
+    {
+      "id": "2b7e9f1c-3a5d-4c8e-b6f2-9d0a1e4c5b7f",
+      "slug": "earth-elemental",
+      "name": "Earth Elemental",
+      "source": "Monster Manual 2014",
+      "description": "An earth elemental plods forward like a walking hill, club-like arms of jagged stone swinging at its sides. Its head and body consist of dirt and stone, occasionally set with chunks of metal, gems, and bright minerals.\nEarth elementals glide through rock and earth as though they were liquid. Earthbound creatures have much to fear from an earth elemental, since the elemental can pinpoint the precise location of any foe that stands on solid ground in its vicinity.",
+      "type": "elemental",
+      "subtype": "elemental",
+      "subSubtype": "earth",
+      "size": "Large",
+      "alignment": "Neutral",
+      "cr": 5,
+      "xp": "1,800",
+      "proficiencyBonus": 3,
+      "armorClass": 17,
+      "armorType": "natural armor",
+      "initiative": -1,
+      "hitPoints": 126,
+      "hitDice": "12d10+60",
+      "speed": { "walking": 30, "flying": null, "swimming": null, "climbing": null, "burrowing": 30 },
+      "abilities": { "STR": 20, "DEX": 8, "CON": 20, "INT": 5, "WIS": 10, "CHA": 5 },
+      "savingThrows": {},
+      "skills": {},
+      "damageVulnerabilities": ["thunder"],
+      "damageResistances": ["bludgeoning, piercing, and slashing from nonmagical attacks"],
+      "damageImmunities": ["poison"],
+      "conditionImmunities": ["exhaustion", "paralyzed", "petrified", "poisoned", "unconscious"],
+      "senses": { "darkvision": 60, "blindsight": null, "tremorsense": 60, "truesight": null, "passivePerception": 10 },
+      "languages": ["Terran"],
+      "telepathy": null,
+      "traits": [
+        { "name": "Earth Glide", "description": "The elemental can burrow through nonmagical, unworked earth and stone. While doing so, the elemental doesn't disturb the material it moves through." },
+        { "name": "Siege Monster", "description": "The elemental deals double damage to objects and structures." }
+      ],
+      "actions": [
+        { "name": "Multiattack", "type": "multiattack", "description": "The elemental makes two slam attacks." },
+        {
+          "name": "Slam",
+          "type": "meleeWeaponAttack",
+          "toHit": 8,
+          "reach": "10 ft.",
+          "target": "one target",
+          "damage": [{ "type": "bludgeoning", "dice": "2d8+5", "average": 14 }],
+          "description": "Melee Weapon Attack: +8 to hit, reach 10 ft., one target. Hit: 14 (2d8+5) bludgeoning damage."
+        }
+      ],
+      "bonusActions": [],
+      "reactions": [],
+      "legendaryActions": { "description": null, "actions": [] },
+      "lairActions": []
+    },
+    {
+      "id": "5c1d8a4f-7e2b-4f9a-8d3c-6b0e2f5a9d1e",
+      "slug": "quasit",
+      "name": "Quasit",
+      "source": "Monster Manual 2025",
+      "description": "Quasits are tiny, shape-shifting demons that serve more powerful fiends as spies, servants, and messengers. A quasit's true form is a small, hunched creature with leathery wings, a barbed tail, and a face full of needle-sharp teeth. Quasits delight in causing misery and are especially fond of corrupting mortals through whispered temptation.",
+      "type": "fiend",
+      "subtype": "demon",
+      "subSubtype": "quasit",
+      "size": "Tiny",
+      "alignment": "Chaotic Evil",
+      "cr": 1,
+      "xp": "200",
+      "proficiencyBonus": 2,
+      "armorClass": 13,
+      "armorType": "natural armor",
+      "initiative": 3,
+      "hitPoints": 25,
+      "hitDice": "10d4",
+      "speed": { "walking": 40, "flying": null, "swimming": null, "climbing": null, "burrowing": null },
+      "abilities": { "STR": 5, "DEX": 17, "CON": 10, "INT": 7, "WIS": 10, "CHA": 10 },
+      "savingThrows": {},
+      "skills": { "Stealth": 5 },
+      "damageVulnerabilities": [],
+      "damageResistances": ["cold", "fire", "lightning"],
+      "damageImmunities": ["poison"],
+      "conditionImmunities": ["poisoned"],
+      "senses": { "darkvision": 120, "blindsight": null, "tremorsense": null, "truesight": null, "passivePerception": 10 },
+      "languages": ["Abyssal", "Common"],
+      "telepathy": null,
+      "traits": [
+        { "name": "Magic Resistance", "description": "The quasit has advantage on saving throws against spells and other magical effects." }
+      ],
+      "actions": [
+        {
+          "name": "Rend",
+          "type": "meleeWeaponAttack",
+          "toHit": 5,
+          "reach": "5 ft.",
+          "target": "one target",
+          "damage": [{ "type": "slashing", "dice": "1d4+3", "average": 5 }],
+          "onHit": { "conditions": [{ "condition": "poisoned", "duration": "until the start of the quasit's next turn" }] },
+          "description": "Melee Attack Roll: +5, reach 5 ft. Hit: 5 (1d4+3) slashing damage, and the target has the Poisoned condition until the start of the quasit's next turn."
+        },
+        { "name": "Invisibility", "type": "generic", "description": "The quasit casts invisibility on itself, requiring no spell components and using Charisma as the spellcasting ability." },
+        {
+          "name": "Scare",
+          "type": "savingThrow",
+          "uses": { "max": 1, "per": "day" },
+          "save": { "ability": "WIS", "dc": 10 },
+          "range": "20 ft.",
+          "target": "one creature",
+          "onFailure": { "conditions": [{ "condition": "frightened", "duration": "1 minute", "repeatSaveAtEndOfTurn": true }] },
+          "description": "Wisdom Saving Throw: DC 10, one creature within 20 feet. Failure: The target has the Frightened condition. At the end of each of its turns, the target repeats the save, ending the effect on itself on a success. After 1 minute, it succeeds automatically."
+        },
+        { "name": "Shape-Shift", "type": "generic", "description": "The quasit shape-shifts to resemble a bat (Speed 10 ft., Fly 40 ft.), a centipede (40 ft., Climb 40 ft.), or a toad (40 ft., Swim 40 ft.), or it returns to its true form. Its game statistics are the same in each form except for its Speed. Any equipment it is wearing or carrying isn't transformed." }
+      ],
+      "bonusActions": [],
+      "reactions": [],
+      "legendaryActions": { "description": null, "actions": [] },
+      "lairActions": []
+    }
+  ]
+}
