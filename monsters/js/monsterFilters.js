@@ -1,4 +1,4 @@
-import { inputElement, typeSelectElement, crSelectElement } from './domQueries.js';
+import { inputElement, typeSelectElement, crSelectElement, sourcesElement } from './domQueries.js';
 
 function filtering(monsters) {
     const nameTerm = inputElement.value.trim().toLowerCase();
@@ -17,7 +17,11 @@ function filtering(monsters) {
         const nameMatches = monster.name.toLowerCase().includes(nameTerm);
         const crMatches = crTerm === "" || monster.cr === parseCr(crTerm);
         const typeMatches = typeTerm === "" || monster.type.toLowerCase().includes(typeTerm);
-        return nameMatches && crMatches && typeMatches;
+
+        const checkedSources = [...sourcesElement.querySelectorAll("input:checked")].map(checkbox => checkbox.value);
+        const sourceMatches = checkedSources.length === 0 || checkedSources.includes(monster.sourceId);
+
+        return nameMatches && crMatches && typeMatches && sourceMatches;
     });
     return filtered
 }

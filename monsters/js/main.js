@@ -1,6 +1,7 @@
 import {
     monsterElement, 
     crSelectElement, 
+    sourcesElement, 
     resetFiltersButton,
     typeSelectElement, 
     sortSelectElement,inputElement
@@ -11,6 +12,7 @@ import { filtering } from './monsterFilters.js';
 import { sortList } from './listSorter.js'
 import { resetAll } from './filterReset.js';
 import { descriptionDisplay } from './monsterDescriptionDisplay.js';
+import { loadSources } from './sourceOption.js';
 
 let totalMonsters = []; 
 const render = () => 
@@ -19,6 +21,7 @@ const render = () =>
 inputElement.addEventListener("input", render);
 crSelectElement.addEventListener("change", render);
 typeSelectElement.addEventListener("change", render);
+sourcesElement.addEventListener("change", render);
 sortSelectElement.addEventListener("change", render);
 resetFiltersButton.addEventListener("click", () => {
     resetAll();
@@ -28,6 +31,7 @@ resetFiltersButton.addEventListener("click", () => {
 loadMonsters().then(monsterList => {
     totalMonsters = monsterList; 
     render();
+    loadSources(monsterList)
 });
 
 monsterElement.addEventListener("click", event => 

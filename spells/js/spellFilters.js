@@ -1,6 +1,6 @@
-import { inputElement, schoolSelectElement, levelSelectElement } from './domQueries.js';
+import { inputElement, schoolSelectElement, levelSelectElement, sourcesElement } from './domQueries.js';
 
-export function filtering(spells) {
+function filtering(spells) {
     const nameTerm = inputElement.value.trim().toLowerCase();
     const levelTerm = levelSelectElement.value;
     const schoolTerm = schoolSelectElement.value.trim().toLowerCase();
@@ -9,8 +9,13 @@ export function filtering(spells) {
         const nameMatches = spell.name.toLowerCase().includes(nameTerm);
         const levelMatches = levelTerm === "" || spell.level === Number(levelTerm);
         const schoolMatches = schoolTerm === "" || spell.school.toLowerCase().includes(schoolTerm);
-        return nameMatches && levelMatches && schoolMatches;
+
+        const checkedSources = [...sourcesElement.querySelectorAll("input:checked")].map(checkbox => checkbox.value);
+        const sourceMatches = checkedSources.length === 0 || checkedSources.includes(spell.sourceId);
+
+        return nameMatches && levelMatches && schoolMatches && sourceMatches;
     });
     return filtered
 }
 
+export {filtering}
